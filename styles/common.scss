@@ -1,0 +1,123 @@
+* {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+
+header {
+  margin: 15px 0;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+#heading {
+  display: flex;
+  flex-flow: column nowrap;
+}
+
+#heading-logo {
+  font-size: 36px;
+  font-family: 'Montez', cursive;
+  color: blue;
+}
+
+#heading-caption {
+  font-size: 16px;
+  font-family: 'Ubuntu Mono', monospace;
+}
+
+nav button {
+  padding: 6px 20px;
+  background-color: #0800FF;
+  border-color: #999;
+  color: white;
+  font-size: 14px;
+  margin: 0 6px;
+}
+
+#modal-container {
+  display: none;
+  z-index: 1;
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0, 0, 0);
+  background-color: rgb(0, 0, 0, 0.4);
+}
+
+.modal-dialog {
+  left: 50%;
+  top: 120px;
+  position: absolute;
+  padding: 4px 16px;
+  background-color: white;
+  border-radius: 0px;
+}
+
+.modal-heading {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+  color: grey;
+  border-bottom: 1px solid;
+}
+
+.modal-title {
+  font-size: 20px;
+}
+
+.modal-close {
+  font-size: 30px;
+  font-weight: bold;
+  color: grey;
+  border: none;
+  background: none;
+}
+
+.modal-field {
+  margin: 8px 0;
+  display: block;
+}
+
+.modal-dialog input {
+  margin: 8px 0;
+  width: 100%;
+  background-color: #F1F1F1;
+  border: none;
+  padding: 8px;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.modal-dialog textarea {
+  margin: 8px 0;
+  width: 100%;
+  background-color: #F1F1F1;
+  border: none;
+  padding: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  resize: none;
+}
+
+.modal-dialog input::placeholder {
+  color: black;
+  opacity: 0.5;
+}
+
+.modal-submit {
+  width: 100%;
+  padding: 8px;
+  border: none;
+  background-color: #5FB762;
+  color: white;
+  font-size: 14px;
+  margin: 16px 0;
+}
+

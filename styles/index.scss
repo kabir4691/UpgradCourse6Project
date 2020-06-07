@@ -1,0 +1,69 @@
+body {
+  background-image: url('../images/background.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+#modal-dialog-signup {
+  display: none;
+  height: 500px;
+  width: 380px;
+  margin-left: -190px;
+}
+
+#modal-dialog-signin {
+  display: none;
+  height: 350px;
+  width: 380px;
+  margin-left: -190px;
+}
+
+#modal-signin-footer {
+  text-align: center;
+  color: black;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+#modal-signin-footer-signup {
+  color:blue;
+}
+
+#modal-dialog-createpost {
+  display: none;
+  height: 510px;
+  width: 500px;
+  margin-left: -250px;
+}
+
+#modal-submit-createpost-container {
+  text-align: center;
+}
+
+#modal-submit-createpost {
+  width: unset;
+  padding: 8px 24px;
+}
+
+#content {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  height: 40px;
+  width: 260px;
+  margin-top: -20px;
+  margin-left: -130px;
+}
+
+#content button {
+  padding: 6px 20px;
+  background-color: #CFB53B;
+  color: black;
+  font-size: 16px;
+  border-color: #DDD;
+}
