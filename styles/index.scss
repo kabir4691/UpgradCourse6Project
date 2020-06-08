@@ -1,33 +1,10 @@
+@import './common.scss';
+
 body {
   background-image: url('../images/background.jpg');
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
-}
-
-#modal-dialog-signup {
-  display: none;
-  height: 500px;
-  width: 380px;
-  margin-left: -190px;
-}
-
-#modal-dialog-signin {
-  display: none;
-  height: 350px;
-  width: 380px;
-  margin-left: -190px;
-}
-
-#modal-signin-footer {
-  text-align: center;
-  color: black;
-  font-size: 14px;
-  font-weight: 600;
-}
-
-#modal-signin-footer-signup {
-  color:blue;
 }
 
 #modal-dialog-createpost {
