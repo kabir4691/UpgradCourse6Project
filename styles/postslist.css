@@ -1,0 +1,273 @@
+* {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+
+header {
+  margin: 15px 0;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+#heading {
+  display: flex;
+  flex-flow: column nowrap;
+}
+
+#heading-logo {
+  font-size: 36px;
+  font-family: "Montez", cursive;
+  color: blue;
+}
+
+#heading-caption {
+  font-size: 16px;
+  font-family: "Ubuntu Mono", monospace;
+}
+
+nav button {
+  padding: 6px 20px;
+  background-color: #0800FF;
+  border-color: #999;
+  color: white;
+  font-size: 14px;
+  margin: 0 6px;
+}
+
+#modal-container {
+  display: none;
+  z-index: 1;
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: black;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-dialog {
+  left: 50%;
+  top: 120px;
+  position: absolute;
+  padding: 4px 16px;
+  background-color: white;
+  border-radius: 0px;
+}
+
+#modal-dialog-signup {
+  display: none;
+  height: 500px;
+  width: 380px;
+  margin-left: -190px;
+}
+
+#modal-dialog-signin {
+  display: none;
+  height: 350px;
+  width: 380px;
+  margin-left: -190px;
+}
+
+#modal-signin-footer {
+  text-align: center;
+  color: black;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+#modal-signin-footer-signup {
+  color: blue;
+}
+
+.modal-heading {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid;
+}
+
+.modal-title {
+  font-size: 20px;
+  color: grey;
+}
+
+.modal-close {
+  font-size: 30px;
+  font-weight: bold;
+  color: grey;
+  border: none;
+  background: none;
+}
+
+.modal-field {
+  margin: 8px 0;
+  display: block;
+}
+
+.modal-dialog input {
+  margin: 8px 0;
+  width: 100%;
+  background-color: #F1F1F1;
+  border: none;
+  padding: 8px;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.modal-dialog textarea {
+  margin: 8px 0;
+  width: 100%;
+  background-color: #F1F1F1;
+  border: none;
+  padding: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  resize: none;
+}
+
+.modal-dialog input::placeholder {
+  color: black;
+  opacity: 0.5;
+}
+
+.modal-submit {
+  width: 100%;
+  padding: 8px;
+  border: none;
+  background-color: #5FB762;
+  color: white;
+  font-size: 14px;
+  margin: 16px 0;
+}
+
+body {
+  background: #ffeedd;
+}
+
+#post-all-container {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  padding: 0 24px;
+}
+
+.post-card-container {
+  flex-basis: 50%;
+  padding: 8px 24px;
+}
+
+.post-card {
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px 0px #999;
+  transition: box-shadow 0.5s;
+}
+
+.post-card:hover {
+  box-shadow: 0px 8px 16px 0px #999;
+}
+
+.post-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  vertical-align: center;
+  border-radius: 10px;
+  background-color: white;
+}
+
+.username {
+  padding: 8px;
+  margin: 0px;
+  color: #6f6f6f;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.1;
+  text-align: center;
+}
+
+.post-content {
+  flex: 1;
+  background-color: #e8e8e8;
+  border-radius: 0 10px 10px 0;
+}
+
+.post-heading-container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-flow: row nowrap;
+  color: #808080;
+  margin: 8px 16px;
+}
+
+.post-heading {
+  flex: 1;
+  color: #808080;
+  margin: 0px;
+}
+
+.post-delete {
+  color: #808080;
+  border: none;
+  background: none;
+}
+
+.post-text {
+  color: black;
+  line-height: 1.1;
+  margin: 8px 16px;
+}
+
+.post-ellipsis-container {
+  margin: 0 16px;
+  text-align: right;
+}
+
+.post-ellipsis {
+  color: #808080;
+  border: none;
+  background: none;
+}
+
+#modal-dialog-deletepost {
+  display: none;
+  height: 100px;
+  width: 360px;
+  margin-left: -180px;
+  top: 240px;
+}
+
+#deletepost-title {
+  margin: 8px;
+}
+
+#deletepost-choices {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+  margin: 16px 8px;
+}
+
+#deletepost-choices button {
+  padding: 4px 24px;
+  color: white;
+  border: none;
+  font-size: 14px;
+}
+
+#deletepost-yes {
+  background-color: #5eb761;
+}
+
+#deletepost-no {
+  background-color: #d13a39;
+}
+
+/*# sourceMappingURL=postslist.css.map */
