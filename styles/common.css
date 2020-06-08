@@ -64,12 +64,12 @@ nav button {
   flex-flow: row nowrap;
   justify-content: space-between;
   align-items: center;
-  color: grey;
   border-bottom: 1px solid;
 }
 
 .modal-title {
   font-size: 20px;
+  color: grey;
 }
 
 .modal-close {
