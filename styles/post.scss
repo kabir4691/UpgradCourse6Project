@@ -1,0 +1,74 @@
+@import './common.scss';
+
+main {
+  padding: 10px 50px;
+}
+
+#post-title {
+  text-align: center;
+}
+
+#post-author-container {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+  margin: 16px 0;
+}
+
+#post-container button {
+  padding: 8px 16px;
+  background-color: #ed2553;
+  color: white;
+  border: none;
+  font-size: 14px;
+  box-shadow: 0px 4px 8px 0px #999;
+  transition: box-shadow 0.5s;
+}
+
+#post-container button:hover {
+  box-shadow: 0px 8px 16px 0px #999;
+}
+
+#post-save {
+  display: none;
+}
+
+#post-text {
+  margin: 16px 0;
+  line-height: 1.2;
+}
+
+#post-like-count {
+  font-size: 16px;
+  color: grey;
+  margin: 10px 0;
+}
+
+#comments-container-outer {
+  width: 920px;
+  margin: 20px 0;
+}
+
+#comment-input {
+  margin: 10px 0;
+  width: 100%;
+  resize: none;
+}
+
+#all-comments {
+  font-weight: bold;
+  margin: 20px 0 10px 0;
+}
+
+#comments-container {
+  background-color: #e3e4e6;
+  padding: 10px;
+}
+
+.comment {
+  margin: 10px 0;
+  padding: 20px 10px;
+  background-color: white;
+  font-size: 14px;
+}

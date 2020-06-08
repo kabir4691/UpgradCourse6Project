@@ -1,0 +1,222 @@
+* {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+
+header {
+  margin: 15px 0;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+#heading {
+  display: flex;
+  flex-flow: column nowrap;
+}
+
+#heading-logo {
+  font-size: 36px;
+  font-family: "Montez", cursive;
+  color: blue;
+}
+
+#heading-caption {
+  font-size: 16px;
+  font-family: "Ubuntu Mono", monospace;
+}
+
+nav button {
+  padding: 6px 20px;
+  background-color: #0800FF;
+  border-color: #999;
+  color: white;
+  font-size: 14px;
+  margin: 0 6px;
+}
+
+#modal-container {
+  display: none;
+  z-index: 1;
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: black;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-dialog {
+  left: 50%;
+  top: 120px;
+  position: absolute;
+  padding: 4px 16px;
+  background-color: white;
+  border-radius: 0px;
+}
+
+#modal-dialog-signup {
+  display: none;
+  height: 500px;
+  width: 380px;
+  margin-left: -190px;
+}
+
+#modal-dialog-signin {
+  display: none;
+  height: 350px;
+  width: 380px;
+  margin-left: -190px;
+}
+
+#modal-signin-footer {
+  text-align: center;
+  color: black;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+#modal-signin-footer-signup {
+  color: blue;
+}
+
+.modal-heading {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid;
+}
+
+.modal-title {
+  font-size: 20px;
+  color: grey;
+}
+
+.modal-close {
+  font-size: 30px;
+  font-weight: bold;
+  color: grey;
+  border: none;
+  background: none;
+}
+
+.modal-field {
+  margin: 8px 0;
+  display: block;
+}
+
+.modal-dialog input {
+  margin: 8px 0;
+  width: 100%;
+  background-color: #F1F1F1;
+  border: none;
+  padding: 8px;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.modal-dialog textarea {
+  margin: 8px 0;
+  width: 100%;
+  background-color: #F1F1F1;
+  border: none;
+  padding: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  resize: none;
+}
+
+.modal-dialog input::placeholder {
+  color: black;
+  opacity: 0.5;
+}
+
+.modal-submit {
+  width: 100%;
+  padding: 8px;
+  border: none;
+  background-color: #5FB762;
+  color: white;
+  font-size: 14px;
+  margin: 16px 0;
+}
+
+main {
+  padding: 10px 50px;
+}
+
+#post-title {
+  text-align: center;
+}
+
+#post-author-container {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+  margin: 16px 0;
+}
+
+#post-container button {
+  padding: 8px 16px;
+  background-color: #ed2553;
+  color: white;
+  border: none;
+  font-size: 14px;
+  box-shadow: 0px 4px 8px 0px #999;
+  transition: box-shadow 0.5s;
+}
+
+#post-container button:hover {
+  box-shadow: 0px 8px 16px 0px #999;
+}
+
+#post-save {
+  display: none;
+}
+
+#post-text {
+  margin: 16px 0;
+  line-height: 1.2;
+}
+
+#post-like-count {
+  font-size: 16px;
+  color: grey;
+  margin: 10px 0;
+}
+
+#comments-container-outer {
+  width: 920px;
+  margin: 20px 0;
+}
+
+#comment-input {
+  margin: 10px 0;
+  width: 100%;
+  resize: none;
+}
+
+#all-comments {
+  font-weight: bold;
+  margin: 20px 0 10px 0;
+}
+
+#comments-container {
+  background-color: #e3e4e6;
+  padding: 10px;
+}
+
+.comment {
+  margin: 10px 0;
+  padding: 20px 10px;
+  background-color: white;
+  font-size: 14px;
+}
+
+/*# sourceMappingURL=post.css.map */

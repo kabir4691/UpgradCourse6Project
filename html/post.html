@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="https://kit.fontawesome.com/cbf741d6c7.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Montez&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu+Mono&display=swap" rel="stylesheet">
+    <link href="../styles/common.css" rel="stylesheet" >
+    <link href="../styles/post.css" rel="stylesheet" >
+    <script defer src="../scripts/common.js"></script>
+    <script defer src="../scripts/post.js"></script>
+    <title>ScriBBler</title>
+</head>
+
+<body>
+    <header class="container-fluid">
+        <div id="heading">
+            <span id="heading-logo">ScriBBler</span>
+            <span id="heading-caption">Explore, Imagine, Create</span>
+        </div>
+        <nav>
+            <button id="nav-button-signup" onclick="onSignUpRequested()">Sign Up</button>
+            <button id="nav-button-signin" onclick="onSignInRequested()">Sign In</button>
+        </nav>
+    </header>
+
+    <main>
+
+        <div id="post-container">
+          <h4 id="post-title">Everything you should know about ‘module’ & ‘require’ in Node.js</h4>
+          <div id="post-author-container">
+            <h5 id="post-author">Srishti Gupta</h5>
+            <button id="post-edit" onclick="onEditPostRequested()">
+              <span>Edit</span>
+              <span class="fa fa-edit"></span>
+            </button>
+            <button id="post-save" onclick="onSavePostRequested()">
+              <span>Save</span>
+              <span class="fa fa-save"></span>
+            </button>
+          </div>
+          <p id="post-text">UPDATED:<br/>Node.js treats each JavaScript file as a separate module.
+            For instance, if you have a file containing some code and this file is named xyz.js, then this file is treated as a module in Node, and you can say that you’ve created a module named xyz.
+            
+            Let’s take an example to understand this better.
+            
+            You have a file named circle.js which consists of the logic for calculating the area & the circumference of a circle of a given radius, as given below:
+            
+            circle.js
+            
+            You can call circle.js file a module named circle.
+            
+            You might be wondering why is there a need to have multiple modules? You could have just written all the code in a single module. Well, it is very important to write modular code. By modular, I mean to say that your code should be independent and should be loosely coupled. Imagine that there’s a large application and you have all your code written in just one place, just one file. Too messy, right?
+            
+            How does the code written inside a module run?
+            Before executing the code written inside a module, Node takes the entire code and encloses it within a function wrapper. The syntax of this function wrapper is:
+            
+            
+            All code you write in a module resides in the function wrapper!
+            The function wrapper for the circle module will look like the one given below:
+            
+            You can see that there is a function wrapper at the root level encompassing all the code written inside the circle module.
+            
+            The entire code written inside a module is private to the module, unless explicitly stated (exported) otherwise.
+            This is the most significant advantage of having modules in Node.js. Even if you define a global variable in a module using var, let or const keywords, the variables are scoped locally to the module rather than being scoped globally. This happens because each module has a function wrapper of its own and the code written inside one function is local to that function and cannot be accessed outside this function.
+            
+            
+            Code written inside a module is private to it!
+            Imagine that there are two modules — A and B. The code written inside the module A is enclosed within the function wrapper corresponding to the module A. Similar thing happens with the code written inside the module B. Because the code pertaining to both the modules is enclosed within different functions, these functions will not be able to access the code of each other. (Remember each function in JavaScript has its own local scope?) This is the reason why module A cannot access the code written inside module B and vice-versa.
+            
+            The five parameters — exports, require, module, __filename, __dirname are available inside each module in Node. Though these parameters are global to the code within a module yet they are local to the module (because of the function wrapper as explained above). These parameters provide valuable information related to a module.
+            
+            Let’s revisit the circle module, which you looked at earlier. There are three constructs defined in this module — a constant variable PI, a function named calculateArea and another function named calculateCircumference. An important point to keep in mind is that all these constructs are private to the circle module by default. It means that you cannot use these constructs in any other module unless explicitly specified.
+            
+            So, the question that arises now is how do you specify something in a module that can be used by some other module? This is when the module & require parameters of the function wrapper are helpful. Let’s discuss these two parameters in this article.</p>
+        
+
+        <button id="post-like" onclick="onLikePostRequested()">
+          <span class="fa fa-thumbs-up"></span>
+          <span id="post-like-status">Like</span>
+        </button>
+        <p id="post-like-count">Be the first to like this</p>
+
+        <div id="comments-container-outer">
+          <textarea rows="4" id="comment-input" placeholder="Leave a comment..."></textarea>
+          <button id="comment-add" onclick="onAddCommentRequested()">Comment</button>
+
+          <p id="all-comments">All Comments</p>
+          <div id="comments-container"></div>
+        </div>
+      </div>
+        
+
+        <div id="modal-container">
+            <div class="modal-content modal-dialog" id="modal-dialog-signup">
+                <div class="modal-heading">
+                    <span class="modal-title">Get Started</span>
+                    <button class="modal-close" onclick="onSignUpCloseRequested()">&times;</button>
+                </div>
+                <form>
+                    <span class="modal-field">Name</span>
+                    <input type="text" name="signup-name" placeholder="Enter your name" required>
+                    <span class="modal-field">Username</span>
+                    <input type="text" name="signup-username" placeholder="Enter your username" required>
+                    <span class="modal-field">Password</span>
+                    <input type="password" name="signup-password" placeholder="Enter your password" required>
+                    <span class="modal-field">Confirm Password</span>
+                    <input type="password" name="signup-password-confirm" placeholder="Re-enter your password" required>
+                    <button class="modal-submit">Sign up</button>
+                </form>
+            </div>
+    
+            <div class="modal-content modal-dialog" id="modal-dialog-signin">
+                <div class="modal-heading">
+                    <span class="modal-title">Welcome Back!</span>
+                    <button class="modal-close" onclick="onSignInCloseRequested()">&times;</button>
+                </div>
+                <form>
+                    <span class="modal-field">Username</span>
+                    <input type="text" name="signin-username" placeholder="Enter your username" required>
+                    <span class="modal-field">Password</span>
+                    <input type="password" name="signin-password" placeholder="Enter your password" required>
+                    <button class="modal-submit">Sign In</button>
+                </form>
+                <div id="modal-signin-footer">
+                    <span>Not a member?</span>
+                    <a id="modal-signin-footer-signup" onclick="onSignInCloseRequested(); onSignUpRequested();">Sign Up</a>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+
+</html>
